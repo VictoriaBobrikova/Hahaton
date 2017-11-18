@@ -1,0 +1,52 @@
+﻿
+@{
+    ViewBag.Title = "Profile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Личный кабинет</h2>
+
+
+    <div class="align-right">
+        <button type="button" class="btn btn-primary">Действующие объявления</button>
+        <button type="button" class="btn btn-primary">Завершённые</button>
+        <button type="button" class="btn btn-primary">Сообщения</button>
+    </div>
+<br><br>
+<div class="row">
+    <div class="col-md-3">
+        <img src="~/Content/Images/Profile.jpg" style="width:250px;"/>
+        <br>
+        <div>
+            <h3>Данные пользователя</h3>
+            <p><strong>Имя: </strong>Саня</p>
+            <p><strong>Фамилия: </strong>Санин</p>
+            <p><strong>Дата рождения: </strong>01.10.1000</p>
+
+        </div>
+    </div>
+        <div class="col-md-9">
+            <div class="adv">
+                <div class="row">
+                    <h2 style="margin-left:20px;">Подать объявление:</h2>
+                    <div class="col-md-4">
+                        <img src="~/Content/Images/blagotvor.jpg" style="width:250px; margin-left:10px;" />
+                        <h3>Изменить фото</h3>
+                        <p>
+                            <input type="file" name="pic" class="form-control">
+                        </p>
+                    </div>
+                    <div class="col-md-8">
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Название"><br>
+                                <input type="text" class="form-control" placeholder="Информация" style="height:300px">
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+@*<div class="col-md-4">*@

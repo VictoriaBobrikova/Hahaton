@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Charity.Repository;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -10,26 +11,27 @@ namespace Charity.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            var advRep = new AdvRepository();
+            var advList = advRep.GetAll();
+
+            return View(advList);
         }
 
         public ActionResult Adv()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
         public ActionResult Profile()
         {
-            ViewBag.Message = "Your contact page.";
+
 
             return View();
         }
 
         public ActionResult AddAdv()
         {
-            ViewBag.Message = "Your contact page.";
+
 
             return View();
         }

@@ -19,6 +19,35 @@
 /* Set width on the form input elements since they're 100% wide by default */
 input,
 select,
-textarea {
+/*textarea {
     max-width: 280px;
+}*/
+.row {
+    color: black;
+    border: 4px;
+}
+
+#button {
+    float: right;
+}
+
+#m {
+    float: right;
+}
+
+.layer1 {
+    width: 50%;
+    float: right;
+    border: 20px;
+}
+
+.align-right {
+    float: right;
+}
+
+.adv {
+    border: 10px;
+    outline: 2px solid #000;
+    padding: 10px;
+    margin-top: 20px;
 }

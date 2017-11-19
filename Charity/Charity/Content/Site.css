@@ -19,6 +19,8 @@
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    padding-bottom: 90px;
+    padding-top: 20px;
 }
 
 .body-content {
@@ -73,7 +75,7 @@ select,
 }
 .adv-name {
     font-size: 14px;
-    border: 2px solid rgb(138, 210, 215);
+    border: 1px solid rgba(138, 210, 215, 0.5);
     padding: 10px;
     margin: 10px;
 }
@@ -84,12 +86,18 @@ select,
 }
 .adv-info {
     font-size: 14px;
-    border: 2px solid rgb(138, 210, 215);
+    border: 1px solid rgba(138, 210, 215, 0.5);
     padding: 10px;
     margin: 10px;
     max-height: 140px;
     overflow-y: scroll;
 }
+
+.contact {
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
 .user-prof {
     font-size: 18px;
     margin-top: 20px;

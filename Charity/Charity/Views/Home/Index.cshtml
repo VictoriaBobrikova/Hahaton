@@ -9,7 +9,7 @@
         <div class="col-xs-8">
             <form role="form">
                 <div class="form-group">
-                    <input type="text" id="search_input" class="form-control" placeholder="Поиск">
+                    <input type="text" id="search_input" class="form-control" placeholder="Поиск" >
                 </div>
             </form>
 
@@ -33,16 +33,17 @@
                 </div>
                 <div class="col-md-9">
                     <div>
-                        <a href=""><h3>@adv.Name</h3></a>
-                       
+                        <a href="/Home/Adv?id=@(adv.Id)"><h3>@adv.Name</h3></a>
                     </div>
 
                     <br>
                     <div class="description-in-index">
                         @adv.Description
-                        <a><div class="glyphicon glyphicon-star" style="float:right;"></div></a>
-                        <a><div class="glyphicon glyphicon-heart" style="float:right;  margin-right: 5px;"></div></a>
                     </div>
+                </div>
+                <div class="col-md-9 text-right" style="margin-top: -15px;">
+                        <a><div class="glyphicon glyphicon-star" style=""></div></a>
+                        <a><div class="glyphicon glyphicon-heart" style=""></div></a>
                 </div>
             </div>
         }

@@ -5,8 +5,6 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>@Model.Name</h2>
-
 <div class="row">
     <div class="col-md-3">
         <div class="adv">
@@ -27,45 +25,59 @@
                 <div class="adv-date">@Model.Date</div>
             </div>
         </div>
+        <div class="row">
+            <div class="col-xs-12">
+                    <div class="adv-info col-md-9">
 
-        <div class="adv-info col-md-9">
-            @Model.Description;
+                        @Model.Description;
+
+                </div>
+            </div>
         </div>
+        <div class="row contact">
+            <div class="col-xs-12">
+                <a class="btn btn-primary" style="width:150px;" href="/Home/TakeById?id=@Model.Id">Откликнуться</a>
+            </div>
+        </div>
+
+
     </div>
 </div>
 
 <div class="row">
+    <div class="col-xs-12 text-center">
+        <h4>Сюда входят:</h4>
+    </div>
     <div class="col-md-2"></div>
     <div class="col-md-8 adv1">
-        @foreach (var )
+        @foreach (var item in Model.Items)
         {
-
-        }
-        <div class="col-md-12 adv2">
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="adv">
-                        <img src="~/Content/Images/blagotvor.jpg" class="img-circle" style="width:150px;">
-                        <br><br>
-                        <button type="button" class="btn btn-primary" style="width:150px;">Откликнуться</button>
-                        <br>
-                    </div>
-                </div>
-                <div class="col-md-9">
-                    <div class="row">
-                        <div class="col-md-5">
+            <div class="col-md-12 adv2">
+                <div class="row">
+                    <div class="col-md-3">
+                        <div class="adv">
+                            <img src="~/Content/Images/blagotvor.jpg" class="img-circle" style="width:150px;">
+                            <br><br>
                             <br>
-                            <div class="adv-name">Название</div>
                         </div>
-                        <br>
                     </div>
+                    <div class="col-md-9">
+                        <div class="row">
+                            <div class="col-md-5">
+                                <br>
+                                <div class="adv-name">@item.Name</div>
+                            </div>
+                            <br>
+                        </div>
 
-                    <div class="adv-info">
-                        htstra
+                        <div class="adv-info">
+                            @item.Description
+                        </div>
                     </div>
-                </div>
                 </div>
             </div>
+
+        }
     </div>
 </div>
 

@@ -5,7 +5,7 @@
     Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Название</h2>
+<h2>@Model.Name</h2>
 
 <div class="row">
     <div class="col-md-3">
@@ -20,22 +20,16 @@
         <div class="row">
             <div class="col-md-5">
                 <br>
-                <div class="adv-name">Название</div>
+                <div class="adv-name">@Model.Name</div>
             </div>
             <br>
             <div class="col-md-4">
-                <div class="adv-date">Дата</div>
+                <div class="adv-date">@Model.Date</div>
             </div>
         </div>
 
         <div class="adv-info col-md-9">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla quam ante, facilisis vitae sapien a, pulvinar egestas leo. Mauris enim elit, laoreet at viverra nec, venenatis sed orci. Morbi in accumsan odio, non sodales enim. Nam dapibus sapien sed condimentum ultricies. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Aenean ut interdum eros. Proin ac efficitur ante. Ut sodales lacinia velit, id varius augue eleifend sit amet. Phasellus sit amet dolor at tellus egestas viverra.
-
-            Mauris rutrum placerat dignissim. Phasellus id lacus metus. Mauris eleifend neque orci, vitae faucibus tortor aliquam eu. Curabitur porttitor est sit amet odio aliquet, id mattis turpis suscipit. Vestibulum varius libero vel augue volutpat, eget malesuada arcu semper. In varius faucibus hendrerit. Suspendisse et molestie ante. Donec ullamcorper elit non aliquet ultrices. Sed in enim vitae ligula posuere luctus in sed lacus. Sed magna elit, fringilla id tincidunt ut, sagittis quis felis. Quisque rhoncus eros et rutrum blandit. Suspendisse ac nulla malesuada, sagittis nulla ut, feugiat libero.
-
-            Curabitur facilisis ac ante et bibendum. Suspendisse ultrices sem dui, eu ultrices felis tincidunt ac. Proin fermentum ipsum varius purus consequat, nec cursus nulla fermentum. Maecenas nec gravida sapien, ullamcorper dictum augue. Aliquam est urna, lacinia non purus sed, dictum imperdiet mi. Maecenas a eros in sem congue viverra. Ut ultrices est vitae efficitur interdum.
-
-            Mauris a erat a lacus interdum congue. Nulla facilisi. Aliquam non felis fermentum, vi
+            @Model.Description;
         </div>
     </div>
 </div>
@@ -43,6 +37,10 @@
 <div class="row">
     <div class="col-md-2"></div>
     <div class="col-md-8 adv1">
+        @foreach (var )
+        {
+
+        }
         <div class="col-md-12 adv2">
             <div class="row">
                 <div class="col-md-3">

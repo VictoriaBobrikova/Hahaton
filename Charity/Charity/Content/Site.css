@@ -13,8 +13,6 @@
     }
 
 .navbar-nav.pull-right {
-    font-size: 20px;
-    margin-top: 10px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -136,4 +134,11 @@ input[type=file] {
     background: rgba(0, 0, 0, 0.3);
     color: #fff;
     width: 100%;
+}
+.adv-block-item {
+    height: 115px;
+}
+
+.categories > h2 {
+    color:#464646;
 }

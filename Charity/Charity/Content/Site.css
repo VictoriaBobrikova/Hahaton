@@ -116,3 +116,8 @@ input[type=file] {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+.lay-footer {
+    font-size: 16px;
+    padding: 40px;
+    color: rgba(0, 0, 0, 0.3);
+}

@@ -109,6 +109,7 @@ select,
 .border-index {
     border: 2px solid rgba(0, 0, 0, 0.3);
     margin: 5px;
+    border-radius:7px;
 }
 
 input[type=file] {
@@ -116,8 +117,15 @@ input[type=file] {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
-.lay-footer {
-    font-size: 16px;
-    padding: 40px;
-    color: rgba(0, 0, 0, 0.3);
+
+.img-view-adv {
+    width:150px;
+    /*height:150px;*/
+    border-radius:70px;
+    margin-bottom:15px;
+
+}
+
+.description-in-index{
+    float:left:
 }

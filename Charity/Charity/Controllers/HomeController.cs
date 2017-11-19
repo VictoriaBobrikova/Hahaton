@@ -20,7 +20,7 @@ namespace Charity.Controllers
             return View();
         }
 
-        public ActionResult Profile()
+        public ActionResult UserProfile()
         {
             ViewBag.Message = "Your contact page.";
 

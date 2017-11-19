@@ -3,10 +3,28 @@
     padding-bottom: 20px;
 }
 
+.navbar-inverse {
+    background-color: #FFEB3B;
+    border-color: #c7c7c7;
+}
+
+    .navbar-inverse .navbar-nav > li > a {
+        color: #717171;
+    }
+
+.navbar-nav.pull-right {
+    font-size: 20px;
+    margin-top: 10px;
+}
+
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+}
+
+.body-content {
+    background-color: #f3f2f2;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -52,7 +70,8 @@ select,
 .charity {
     font-family: 'Monotype Corsiva';
     font-size: 50px;
-    color: powderblue;
+    color: #828282;
+    cursor: default;
 }
 .adv-name {
     font-size: 14px;
@@ -79,14 +98,21 @@ select,
 
 }
 .adv1 {
-    border: 2px solid rgba(0, 0, 0, 0.2);
+    border: 2px dashed rgba(0, 0, 0, 0.1);
     padding:30px;
 }
 .adv2 {
-    border: 2px solid rgba(0, 0, 0, 0.3);
+    border: 2px solid rgba(0, 0, 0, 0.2);
     padding: 20px;
+    background-color: white;
 }
 .border-index {
     border: 2px solid rgba(0, 0, 0, 0.3);
     margin: 5px;
+}
+
+input[type=file] {
+    border: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
 }

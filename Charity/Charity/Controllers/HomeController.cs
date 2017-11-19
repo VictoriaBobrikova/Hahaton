@@ -30,6 +30,11 @@ namespace Charity.Controllers
             return View();
         }
 
+        public ActionResult AddAdvPage()
+        {
+            return View();
+        }
+
         public ActionResult AddAdv(AdvPostModel model)
         {
             var advRepository = new AdvRepository();

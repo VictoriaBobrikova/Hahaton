@@ -167,6 +167,9 @@
     <Compile Include="Models\DbAdv.cs" />
     <Compile Include="Models\DbImage.cs" />
     <Compile Include="Models\DbItem.cs" />
+    <Compile Include="Models\PostModels\AdvPostModel.cs" />
+    <Compile Include="Models\PostModels\ItemPostModel.cs" />
+    <Compile Include="Models\PostModels\ImgPostModel.cs" />
     <Compile Include="Models\ViewModels\AdvViewModel.cs" />
     <Compile Include="Models\ViewModels\ItemViewModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

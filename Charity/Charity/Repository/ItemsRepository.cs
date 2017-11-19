@@ -1,4 +1,5 @@
 using Charity.Models;
+using Charity.Models.PostModels;
 using Charity.Models.ViewModels;
 using System.Collections.Generic;
 using System.Linq;
@@ -24,7 +25,25 @@ namespace Charity.Repository
             return viewModels;
         }
          
+        public void AddNewItem (ItemPostModel model)
+        {
+            var itemsContext = new ItemsContext();
+            var imagesRep = new ImagesRepository();
 
+            var id = itemsContext.Items.Count() + 1;
 
+            model.Images.ForEach(x =>
+            {
+                imagesRep.AddNewImage(new ImgPostModel { ItemId = id, Path = x.Path });
+            });
+
+            itemsContext.Items.Add(new DbItem
+            {
+                AdvId = model.AdvId,
+                Description = model.Description,
+                Name = model.Name,
+                Id = id
+            });
+        }
     }
 }

@@ -1,4 +1,5 @@
-﻿using Charity.Repository;
+﻿using Charity.Models.PostModels;
+using Charity.Repository;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -17,23 +18,24 @@ namespace Charity.Controllers
             return View(advList);
         }
 
-        public ActionResult Adv()
+        public ActionResult Adv(int id)
+        {
+            var advRep = new AdvRepository();
+            var adv = advRep.GetAdvById(id);
+            return View(adv);
+        }
+
+        public ActionResult UserProfile()
         {
             return View();
         }
 
-        public ActionResult Profile()
+        public ActionResult AddAdv(AdvPostModel model)
         {
+            var advRepository = new AdvRepository();
+            var newAdvId = advRepository.AddNewAdv(model);
 
-
-            return View();
-        }
-
-        public ActionResult AddAdv()
-        {
-
-
-            return View();
+            return RedirectToAction("Adv", new { id = newAdvId });
         }
     }
 }

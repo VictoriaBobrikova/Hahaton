@@ -7,7 +7,9 @@ namespace Charity.Models.PostModels
 {
     public class AdvPostModel { 
        public string Name { get; set; }
+
        public string Description { get; set; }
-       public ItemPostModel items { get; set; }
+
+       public List<ItemPostModel> items { get; set; }
     }
 }

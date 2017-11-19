@@ -1,4 +1,5 @@
 using Charity.Models;
+using Charity.Models.PostModels;
 using Charity.Models.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -46,6 +47,30 @@ namespace Charity.Repository
            
         }
 
+        public int AddNewAdv(AdvPostModel model)
+        {
+            var advContext = new AdvContext();
+            var itemsRep = new ItemsRepository();
+
+            var id = advContext.Advertisememnts.Count() + 1;
+
+            model.items.ForEach(x =>
+            {
+                itemsRep.AddNewItem(new ItemPostModel { AdvId = id, Description = x.Description, Images = x.Images, Name = x.Name });
+            });
+
+            advContext.Advertisememnts.Add(new DbAdv
+            {
+                Id = id,
+                Name = model.Name,
+                Description = model.Description,
+                Date = DateTime.Now,
+                CategoryId = 0,
+                AuthorId = 0
+            });
+
+            return id;
+        }
 
 
     }

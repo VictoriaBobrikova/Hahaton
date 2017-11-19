@@ -1,4 +1,5 @@
 using Charity.Models;
+using Charity.Models.PostModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +17,16 @@ namespace Charity.Repository
             return images.Select(x => x.Path).ToList();
         }
          
-
+        public void AddNewImage(ImgPostModel model)
+        {
+            var imagesContext = new ImageContext();
+            imagesContext.Images.Add(new DbImage
+            {
+                Id = imagesContext.Images.Count() + 1,
+                ItemId = model.ItemId,
+                Path = model.Path
+            });
+        }
 
     }
 }

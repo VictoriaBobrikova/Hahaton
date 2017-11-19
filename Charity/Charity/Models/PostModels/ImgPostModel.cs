@@ -8,5 +8,6 @@ namespace Charity.Models.PostModels
     public class ImgPostModel
     {
         public string Path;
+        public int ItemId;
     }
 }

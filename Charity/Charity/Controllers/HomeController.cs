@@ -44,7 +44,6 @@ namespace Charity.Controllers
             var result = advRepository.SearchByString(searchString);
 
             return View("Index", result);
-
         }
 
         public ActionResult TakeById(int id)

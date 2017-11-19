@@ -12,8 +12,8 @@
         <div class="col-md-5">
             <form role="form">
                 <div class="form-group">
-                    <label>Название: </label><textarea rows="1" cols="45" name="text" class="form-control" placeholder="Название"></textarea><br>
-                    <label>Информация: </label><textarea rows="3" cols="45" name="text" class="form-control" placeholder="Информация"></textarea>
+                    <label>Название: </label><textarea id="adv_name" rows="1" cols="45" name="text" class="form-control" placeholder="Название"></textarea><br>
+                    <label>Информация: </label><textarea id="adv_description" rows="3" cols="45" name="text" class="form-control" placeholder="Информация"></textarea>
 
                     @*<input type="text" class="form-control" placeholder="Название"><br>
                         <input type="text" class="form-control" placeholder="Информация" >*@
@@ -26,8 +26,8 @@
 
 <div class="row">
     <div class="col-md-7">
-        <div class="adv1">
-            <div class="col-md-12 adv2">
+        <div class="adv1" id="items_container">
+            <div class="col-md-12 adv2 item">
                 <div class="row">
                     <div class="col-md-4">
                         <img src="~/Content/Images/blagotvor.jpg" class="img-circle" style="width:150px;">
@@ -44,7 +44,6 @@
                                 <br>
                                 <label>Информация: </label>
                                 <textarea rows="3" cols="45" name="descrtiption" class="form-control"></textarea>
-
                             </div>
                         </form>
                     </div>

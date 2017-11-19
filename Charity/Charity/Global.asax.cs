@@ -11,9 +11,9 @@ namespace Charity
     {
         protected void Application_Start()
         {
-            //Database.SetInitializer(new Repository.DbInitializer());
-            //Database.SetInitializer(new Repository.DbItemsInitializer());
-            //Database.SetInitializer(new Repository.DbImagesInitializer());
+            Database.SetInitializer(new Repository.DbInitializer());
+            Database.SetInitializer(new Repository.DbItemsInitializer());
+            Database.SetInitializer(new Repository.DbImagesInitializer());
 
             AreaRegistration.RegisterAllAreas();
             GlobalConfiguration.Configure(WebApiConfig.Register);

@@ -13,8 +13,6 @@
     }
 
 .navbar-nav.pull-right {
-    font-size: 20px;
-    margin-top: 10px;
 }
 
 /* Set padding to keep content from hitting the edges */
@@ -127,4 +125,12 @@ input[type=file] {
 
 .description-in-index{
     float:left:
+}
+
+.adv-block-item {
+    height: 115px;
+}
+
+.categories > h2 {
+    color:#464646;
 }

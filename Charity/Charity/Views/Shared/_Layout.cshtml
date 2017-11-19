@@ -24,10 +24,10 @@
 
             @*    @Html.ActionLink("ff" , "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
             </div>
-            <div class="navbar-collapse collapse">
+            <div class="navbar-collapse collapse" style="padding: 10px 0;">
                    
                         <ul class="nav navbar-nav charity pull-left"><li>@Html.ActionLink("Charity", "Index", "Home")</li></ul>
-                        <ul class="nav navbar-nav pull-right" style="font-size:20px;">
+                        <ul class="nav navbar-nav pull-right">
                         <li>@Html.ActionLink("Личный кабинет", "UserProfile", "Home")</li>
                         <li>@Html.ActionLink("Подать объявление", "AddAdvPage", "Home")</li>
                         </ul>
@@ -37,10 +37,6 @@
 
     <div class="container body-content">
         @RenderBody()
-        <hr />
-        <footer>
-            <p class="lay-footer">&copy; @DateTime.Now.Year Империя с нуля</p>
-        </footer>
     </div>
 
     @Scripts.Render("~/bundles/bootstrap")

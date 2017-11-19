@@ -17,7 +17,7 @@ namespace Charity.Repository
             var advList = advContext.Advertisememnts.ToList();
             var ViewModels = advList.Select(x => new AdvViewModel
             {
-                id = x.Id,
+                Id = x.Id,
                 Name = x.Name,
                 Description = x.Description,
                 Items = ItemsRep.GetItemsByAdvId(x.Id),
@@ -40,7 +40,7 @@ namespace Charity.Repository
                 Items = itemsRep.GetItemsByAdvId(adv.Id),
                 Description = adv.Description,
                 Date = adv.Date,
-                id = adv.Id,
+                Id = adv.Id,
                 Name = adv.Name
             };
             return ViewModel;
@@ -69,9 +69,27 @@ namespace Charity.Repository
                 AuthorId = 0
             });
 
+            advContext.SaveChanges();
             return id;
         }
 
+        public List<AdvViewModel> SearchByString(string searchString)
+        {
+            var advContext = new AdvContext();
+            var result = advContext.Advertisememnts.Where(x => x.Name.Contains(searchString)).ToList();
+            var ViewModels = result.Select(x => GetAdvById(x.Id)).ToList();
 
+            return ViewModels;
+        }
+
+        public void RemoveById(int id)
+        {
+            var advContext = new AdvContext();
+
+            var adv = advContext.Advertisememnts.Where(x => x.Id == id).FirstOrDefault();
+            advContext.Advertisememnts.Remove(adv);
+            advContext.SaveChanges();
+
+        }
     }
 }

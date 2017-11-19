@@ -37,5 +37,23 @@ namespace Charity.Controllers
 
             return RedirectToAction("Adv", new { id = newAdvId });
         }
+        
+        public ActionResult Search(string searchString)
+        {
+            var advRepository = new AdvRepository();
+            var result = advRepository.SearchByString(searchString);
+
+            return View("Index", result);
+
+        }
+
+        public ActionResult TakeById(int id)
+        {
+            var advRepository = new AdvRepository();
+            advRepository.RemoveById(id);
+
+            return RedirectToAction("Index");
+        }
+
     }
 }

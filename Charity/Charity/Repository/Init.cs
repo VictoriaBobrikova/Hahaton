@@ -12,7 +12,7 @@ namespace Charity.Repository
         protected override void Seed(AdvContext db)
         {
             db.Advertisememnts.Add(new DbAdv { Id = 0, Name = "Стул", Date = DateTime.Now, Description = "Со стулом норм сидеть", CategoryId = 0, AuthorId = 0});
-            db.Advertisememnts.Add(new DbAdv { Id = 1, Name = "Стул", Date = DateTime.Now, Description = "Со стулом норм сидеть", CategoryId = 0, AuthorId = 0 });
+            db.Advertisememnts.Add(new DbAdv { Id = 1, Name = "Zzz", Date = DateTime.Now, Description = "Со стулом норм сидеть", CategoryId = 0, AuthorId = 0 });
             db.Advertisememnts.Add(new DbAdv { Id = 2, Name = "Стул", Date = DateTime.Now, Description = "Со стулом норм сидеть", CategoryId = 0, AuthorId = 0 });
 
             base.Seed(db);

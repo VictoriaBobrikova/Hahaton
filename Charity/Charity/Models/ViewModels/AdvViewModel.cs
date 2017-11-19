@@ -7,7 +7,7 @@ namespace Charity.Models.ViewModels
 {
     public class AdvViewModel
     {
-        public int id { get; set; }
+        public int Id { get; set; }
 
         public string Name { get; set; }
 

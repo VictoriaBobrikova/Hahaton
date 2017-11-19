@@ -7,13 +7,12 @@ function takeAdvById(id) {
 };
 
 function saveAdv() {
-    var name = document.getElementById("search_input").value;
-    var description = document.getElementById("search_input").value;
+    var name = document.getElementById("adv_name").value;
+    var description = document.getElementById("adv_description").value;
 
     var items = document.getElementsByClassName('item');
     for (var i = 0; i < items.length; i++) {
-        var name = items[i].getElementsByClassName('name').value;
-        var description = items[i].getElementsByClassName('description').value;
-        var photo = items[i].getElementsByClassName('photo').value;
-    }
+        var name = items[i].getElementsByClassName('item-name').value;
+        var description = items[i].getElementsByClassName('item-description').value;
+    } 
 };

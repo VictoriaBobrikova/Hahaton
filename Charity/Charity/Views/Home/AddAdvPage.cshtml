@@ -8,12 +8,12 @@
 
 <div class="adv">
     <div class="row">
-        <h2 style="margin-left:20px;">Новое объявление</h2>
+        <h3 style="margin-left:15px;">Новое объявление</h3>
         <div class="col-md-5">
             <form role="form">
                 <div class="form-group">
-                    <label>Название: </label><textarea rows="1" cols="45" name="text" class="form-control" placeholder="Название"></textarea><br>
-                    <label>Информация: </label><textarea rows="3" cols="45" name="text" class="form-control" placeholder="Информация"></textarea>
+                    <label>Название: </label><textarea id="adv_name" rows="1" cols="45"  class="form-control" placeholder="Название"></textarea><br>
+                    <label>Информация: </label><textarea id="adv_description" rows="3" cols="45" name="text" class="form-control" placeholder="Информация"></textarea>
 
                     @*<input type="text" class="form-control" placeholder="Название"><br>
                         <input type="text" class="form-control" placeholder="Информация" >*@
@@ -26,8 +26,9 @@
 
 <div class="row">
     <div class="col-md-7">
-        <div class="adv1">
-            <div class="col-md-12 adv2">
+        <h3 style="margin-left:15px;">В него входят:</h3>
+        <div class="adv1" id="items_container">
+            <div class="col-md-12 adv2 item">
                 <div class="row">
                     <div class="col-md-4">
                         <img src="~/Content/Images/blagotvor.jpg" class="img-circle" style="width:150px;">
@@ -40,19 +41,26 @@
                         <form role="form">
                             <div class="form-group">
                                 <label>Название: </label>
-                                <input type="text" name="name" class="form-control"/>
+                                <input type="text"  class="form-control item-name"/>
                                 <br>
                                 <label>Информация: </label>
-                                <textarea rows="3" cols="45" name="descrtiption" class="form-control"></textarea>
-
+                                <textarea rows="3" cols="45" name="descrtiption" class="form-control item-descrtiption"></textarea>
                             </div>
                         </form>
                     </div>
                 </div>
             </div>
 
+            <div style="padding: 10px 0; text-align: right">
+                <button type="button" class="btn btn-default" style="width:150px;" onclick="addItem()">Добавить</button>
+            </div>
         </div>
+
     </div>
+</div>
+
+<div class="row" style="padding: 15px;">
+    <button type="button" class="btn btn-primary" style="width:150px; height: 50px" onclick="addItem()">Сохранить</button>
 </div>
 
 
